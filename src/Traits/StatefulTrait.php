@@ -193,7 +193,7 @@ trait StatefulTrait
         if ($result === false) {
             $this->addErrorMessage(
                 'transitionNotDefined',
-                'There is no transition defined between states ' . $from . ' and ' . $currentState);
+                'There is no transition defined between states ' . json_encode($from) . ' and ' . $currentState);
         }
         return $result;
     }
